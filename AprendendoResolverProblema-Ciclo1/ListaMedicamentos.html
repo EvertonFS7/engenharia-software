@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Lista de Medicamentos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
+    <style>
+        .remove-btn {
+            background-color: #DC2626;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200">
+    <div class="container mx-auto py-10">
+        <h1 class="text-2xl font-bold mb-5">Lista de Medicamentos</h1>
+        <form id="medicamentos-form">
+            <div class="flex justify-between items-center mb-5">
+                <input type="text"
+                    class="w-1/2 rounded-l-lg border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white px-4 py-2"
+                    placeholder="Nome do medicamento">
+                <input type="number"
+                    class="w-1/4 rounded-l-lg border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white px-4 py-2"
+                    placeholder="Quantidade">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-lg focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Adicionar
+                </button>
+            </div>
+        </form>
+        <ul id="medicamentos-list" class="list-disc pl-10">
+        </ul>
+    </div>
+    <script>
+        const form = document.getElementById('medicamentos-form');
+        const list = document.getElementById('medicamentos-list');
+        let medicamentos = [];
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const medicamentoInput = event.target.elements[0];
+            const quantidadeInput = event.target.elements[1];
+            const medicamento = medicamentoInput.value;
+            const quantidade = quantidadeInput.value;
+            if (medicamento && quantidade) {
+                medicamentos.push({
+                    medicamento,
+                    quantidade
+                });
+                medicamentoInput.value = '';
+                quantidadeInput.value = '';
+                updateList();
+            }
+        });
+
+        function updateList() {
+            list.innerHTML = '';
+            medicamentos.forEach((medicamento, index) => {
+                const item = document.createElement('li');
+                item.textContent = `${medicamento.medicamento}: ${medicamento.quantidade}`;
+                const removeBtn = document.createElement('button');
+                removeBtn.classList.add('remove-btn');
+                removeBtn.textContent = 'Remover';
+                removeBtn.addEventListener('click', () => {
+                    medicamentos.splice(index, 1);
+                    updateList();
+                });
+                item.appendChild(removeBtn);
+                list.appendChild(item);
+            });
+        }
+    </script>
+</body>
+
+</html>

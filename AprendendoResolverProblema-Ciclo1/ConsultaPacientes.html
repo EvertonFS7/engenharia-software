@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tela de Consulta de Pacientes</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
+</head>
+<body class="bg-gray-200">
+	<div class="container mx-auto py-10">
+		<h1 class="text-2xl font-bold mb-5">Consulta de Pacientes</h1>
+		<div class="flex justify-between mb-5">
+			<input type="text" class="w-1/2 rounded-l-lg border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white px-4 py-2" placeholder="Pesquisar por nome ou CPF">
+			<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-lg focus:outline-none focus:shadow-outline" type="button">
+				Pesquisar
+			</button>
+		</div>
+		<table class="table-auto w-full">
+			<thead>
+				<tr>
+					<th class="px-4 py-2">Nome</th>
+					<th class="px-4 py-2">Data de Nascimento</th>
+					<th class="px-4 py-2">CPF</th>
+					<th class="px-4 py-2">Endereço</th>
+					<th class="px-4 py-2">Telefone</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="border px-4 py-2">João da Silva</td>
+					<td class="border px-4 py-2">01/01/1990</td>
+					<td class="border px-4 py-2">123.456.789-00</td>
+					<td class="border px-4 py-2">Rua A, 123</td>
+					<td class="border px-4 py-2">(11) 1234-5678</td>
+				</tr>
+				<tr>
+					<td class="border px-4 py-2">Maria da Silva</td>
+					<td class="border px-4 py-2">05/05/1985</td>
+					<td class="border px-4 py-2">987.654.321-00</td>
+					<td class="border px-4 py-2">Rua B, 456</td>
+					<td class="border px-4 py-2">(11) 9876-5432</td>
+				</tr>
+				<tr>
+					<td class="border px-4 py-2">Pedro Santos</td>
+					<td class="border px-4 py-2">10/10/1975</td>
+					<td class="border px-4 py-2">789.123.456-00</td>
+					<td class="border px-4 py-2">Rua C, 789</td>
+					<td class="border px-4 py-2">(11) 5555-5555</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Paciente</title>
+    <!-- Adicionando os estilos do Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200">
+    <div class="container mx-auto">
+        <h1 class="text-center text-2xl font-bold my-6">Cadastro de Paciente</h1>
+        <form class="max-w-md mx-auto bg-white shadow-md rounded-md p-6">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="nome">
+                    Nome completo:
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="nome" type="text" placeholder="Digite o nome completo">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="data_nascimento">
+                    Data de Nascimento:
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="data_nascimento" type="date">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="cpf">
+                    CPF:
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="cpf" type="text" placeholder="Digite o CPF">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="endereco">
+                    Endereço completo:
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="endereco" type="text" placeholder="Digite o endereço completo">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="telefone">
+                    Telefone:
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="telefone" type="text" placeholder="Digite o telefone">
+            </div>
+            <div class="mb-4">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button">
+                    Cadastrar
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

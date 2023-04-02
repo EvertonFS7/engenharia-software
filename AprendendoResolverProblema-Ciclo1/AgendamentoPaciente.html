@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agendamento de Consulta</title>
+    <!-- Adicionando os estilos do Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200">
+    <div class="container mx-auto">
+        <h1 class="text-center text-2xl font-bold my-6">Agendamento de Consulta</h1>
+        <div class="max-w-md mx-auto bg-white shadow-md rounded-md p-6">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="data_consulta">
+                    Data da consulta:
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="data_consulta" type="date">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="medico">
+                    Médico:
+                </label>
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="medico">
+                    <option value="" disabled selected>Selecione um médico</option>
+                    <option value="1">Dr. João</option>
+                    <option value="2">Dr. Maria</option>
+                    <option value="3">Dr. José</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="tipo_consulta">
+                    Tipo de consulta:
+                </label>
+                <select
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="tipo_consulta">
+                    <option value="" disabled selected>Selecione o tipo de consulta</option>
+                    <option value="1">Consulta de rotina</option>
+                    <option value="2">Consulta de retorno</option>
+                    <option value="3">Consulta de emergência</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="horario">
+                    Horário:
+                </label>
+                <div class="flex flex-wrap justify-between gap-6">
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        08:00
+                    </button>
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        09:00
+                    </button>
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus :shadow-outline"
+                        type="button">
+                        10:00
+                    </button>
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        11:00
+                    </button>
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        14:00
+                    </button>
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        15:00
+                    </button>
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        16:00
+                    </button>
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        17:00
+                    </button>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button
+                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button">
+                    Agendar consulta
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
