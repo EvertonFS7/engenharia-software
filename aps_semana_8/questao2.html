@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar itens a uma lista</title>
+</head>
+
+<body>
+    <h1>Adicionar itens a uma lista</h1>
+
+    <input type="text" id="input-item" placeholder="Digite um item">
+    <button id="btn-add">Adicionar</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+        const inputItem = document.getElementById("input-item");
+        const btnAdd = document.getElementById("btn-add");
+        const lista = document.getElementById("lista");
+
+        btnAdd.addEventListener("click", function () {
+            const item = document.createElement("li");
+            item.innerText = inputItem.value;
+            lista.appendChild(item);
+            inputItem.value = "";
+        });
+    </script>
+</body>
+
+</html>

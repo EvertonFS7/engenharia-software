@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="password">
+            <input type="checkbox">
+            check
+        </label>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <table style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João Silva</td>
+                <td>joao.silva@example.com</td>
+                <td>(11) 9999-9999</td>
+            </tr>
+            <tr>
+                <td>Maria Santos</td>
+                <td>maria.santos@example.com</td>
+                <td>(21) 8888-8888</td>
+            </tr>
+            <tr>
+                <td>Pedro Souza</td>
+                <td>pedro.souza@example.com</td>
+                <td>(31) 7777-7777</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 2rem;">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos laborum esse ut, aut explicabo consequatur
+            culpa ducimus incidunt, deleniti id accusantium. Dolorem libero atque suscipit dolorum, quas commodi eveniet
+            quis!
+        </p>
+        <ul>
+            <li>
+                <p>Lista</p>
+            </li>
+        </ul>
+        <a href="">LINK</a>
+    </div>
+
+</body>
+
+</html>
